@@ -9,7 +9,7 @@
     #     state: started
 
     - name: Pull Image
-      shell: docker pull kushal7551/calculator:latest
+      shell: /usr/local/bin/docker pull kushal7551/calculator:latest
 
     - name: Run the container
-      shell: docker create -it --name Calculator kushal7551/calculator
+      shell: /usr/local/bin/docker create -it --name Calculator kushal7551/calculator
