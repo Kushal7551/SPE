@@ -1,6 +1,6 @@
 # FROM openjdk:11
 
-COPY ./target/Calculator-SPE-MiniProject-1.0-SNAPSHOT-jar-with-dependencies.jar ./
+COPY ./target/Calculator-SPE-MiniProject-1.0-SNAPSHOT.jar ./
 
 WORKDIR ./
 
