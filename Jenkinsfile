@@ -19,7 +19,7 @@ pipeline{
 
         stage("Stage 3 : Build Docker Image"){
             steps{
-                sh "docker build -t kushal7551/calculator:latest ."
+                sh "/usr/local/bin/docker  build -t kushal7551/calculator:latest ."
             }
         }
 
