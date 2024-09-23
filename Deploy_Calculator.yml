@@ -4,7 +4,7 @@
 
   tasks:
     - name: Start Docker Service
-      service:
+      homebrew:
         name: docker
         state: started
 
