@@ -3,10 +3,10 @@
   hosts: all
 
   tasks:
-    - name: Start Docker Service
-      homebrew:
-        name: docker
-        state: started
+    # - name: Start Docker Service
+    #   service:
+    #     name: docker
+    #     state: started
 
     - name: Pull Image
       shell: docker pull kushal7551/calculator:latest
