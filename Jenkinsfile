@@ -25,8 +25,8 @@ pipeline{
 
         stage("Stage 4 : Push Docker Image to Dockerhub"){
             steps{
-                sh 'echo $DOCKERHUB_CRED_PSW | docker login -u $DOCKERHUB_CRED_USR --password-stdin'
-                sh "docker push kushal7551/calculator:latest"
+                sh 'echo $DOCKERHUB_CRED_PSW | /usr/local/bin/docker login -u $DOCKERHUB_CRED_USR --password-stdin'
+                sh "/usr/local/bin/docker push kushal7551/calculator:latest"
             }
         }
 
@@ -34,8 +34,8 @@ pipeline{
             steps{
                 // sh "docker ps -a -q | xargs docker stop | xargs docker rm"
                 // sh "docker rm -f ${docker ps -a -q}"
-                sh "docker container prune -f"
-                sh "docker image prune -a -f"
+                sh "/usr/local/bin/docker container prune -f"
+                sh "/usr/local/bin/docker image prune -a -f"
             }
         }
 
