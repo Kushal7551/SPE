@@ -1,8 +1,7 @@
 pipeline{
     environment{
         DOCKERHUB_CRED = credentials("DockerCredentials")
-        PATH = "/opt/homebrew/bin:$PATH"
-        alias docker = "/usr/local/bin/docker"
+        PATH = "/opt/homebrew/bin:$PATH" 
     }
     agent any
     stages{
