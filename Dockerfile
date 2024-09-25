@@ -1,7 +1,11 @@
-FROM openjdk:11
+# Use the official OpenJDK 11 image as the base image
+FROM openjdk:11-jre-slim
 
-COPY ./target/Calculator-SPE-MiniProject-1.0-SNAPSHOT-jar-with-dependencies.jar ./
+# Set the working directory in the container
+WORKDIR /app
 
-WORKDIR ./
+# Copy the JAR file from the host to the container
+COPY ./target/cal-1.0.0-jar-with-dependencies.jar /app/
 
-CMD ["java", "-jar","Calculator-SPE-MiniProject-1.0-SNAPSHOT-jar-with-dependencies.jar"]
+# Run the JAR file
+CMD ["java", "-jar", "cal-1.0.0-jar-with-dependencies.jar"]
