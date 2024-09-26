@@ -5,11 +5,11 @@ pipeline{
     }
     agent any
     stages{
-//         stage("Stage 1 : Git Clone"){
-//             steps{
-//                 git "https://github.com/shouryap1/Caluclator_SPE_MiniProject.git"
-//             }
-//         }
+        stage("Stage 1 : Git Clone"){
+            steps{
+                git "https://github.com/kushal7551/SPE.git"
+            }
+        }
 
         stage("Stage 2 : Maven Build"){
             steps{
@@ -32,8 +32,6 @@ pipeline{
 
         stage("Stage 5 : Clean Unwanted Docker Images"){
             steps{
-                // sh "docker ps -a -q | xargs docker stop | xargs docker rm"
-                // sh "docker rm -f ${docker ps -a -q}"
                 sh "/usr/local/bin/docker container prune -f"
                 sh "/usr/local/bin/docker image prune -a -f"
             }

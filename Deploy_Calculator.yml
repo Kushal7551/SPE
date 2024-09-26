@@ -3,11 +3,6 @@
   hosts: all
 
   tasks:
-    # - name: Start Docker Service
-    #   service:
-    #     name: docker
-    #     state: started
-
     - name: Pull Image
       shell: /usr/local/bin/docker pull kushal7551/calculator:latest
 
