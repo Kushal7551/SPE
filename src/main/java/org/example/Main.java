@@ -96,6 +96,7 @@ public class Main {
         double res = Math.pow(base, exponent);
         logger.info("[POWER OPERATION] [SUCCESS] " + base + "^" + exponent + " = " + res);
         logger.info("END OP: Power");
+
         return res;
     }
 }
