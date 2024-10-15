@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage("Stage 1 : Git Clone"){
             steps{
-                git credentialsId: 'GitHub-Credentials', url: 'https://github.com/kushal7551/SPE.git'
+                git credentialsId: 'GitHub-Credentials', url: 'https://github.com/kushal7551/SPE.git', branch: 'main'
 //                    sh 'ls'
                 // git  "https://github.com/kushal7551/SPE.git"
             }
