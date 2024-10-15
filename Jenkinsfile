@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage("Stage 1 : Git Clone"){
             steps{
-                git clone "https://github.com/kushal7551/SPE.git"
+                git  "https://github.com/kushal7551/SPE.git"
 //                    sh 'ls'
             }
         }
