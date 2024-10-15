@@ -8,6 +8,7 @@ pipeline{
         stage("Stage 1 : Git Clone"){
             steps{
                 git  "https://github.com/kushal7551/SPE.git"
+                git credentialsId: 'GitHub-Credentials', url: 'https://gitlab/engineering/automation/create_pass_criteria.git'
 //                    sh 'ls'
             }
         }
