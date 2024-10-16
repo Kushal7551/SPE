@@ -14,6 +14,7 @@ public class Main {
         logger.info("Start of Execution");
 
         System.out.println("------------Scientific Calculator--------------");
+        System.out.println("Kushal Partani, IMT2021062");
         do {
             System.out.println("Choices of Operations:");
             System.out.println("1. Square Root");
